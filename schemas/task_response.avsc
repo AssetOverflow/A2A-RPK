@@ -1,0 +1,51 @@
+{
+  "type": "record",
+  "name": "TaskResponse",
+  "namespace": "com.a2a.schema",
+  "fields": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "doc": "Unique identifier for the task"
+    },
+    {
+      "name": "responder_id",
+      "type": "string",
+      "doc": "ID of the agent responding to the task"
+    },
+    {
+      "name": "status",
+      "type": {
+        "type": "enum",
+        "name": "TaskStatus",
+        "symbols": [
+          "PENDING",
+          "ACCEPTED",
+          "REJECTED",
+          "NEGOTIATING",
+          "RUNNING",
+          "COMPLETED",
+          "FAILED"
+        ]
+      },
+      "doc": "Current status of the task"
+    },
+    {
+      "name": "counter_offer",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Counter-offer price if status is NEGOTIATING"
+    },
+    {
+      "name": "message",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Optional message or reason for the response"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "doc": "Timestamp when the response was created (Unix epoch in milliseconds)"
+    }
+  ]
+}

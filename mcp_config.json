@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "a2a-requester": {
+      "command": "docker",
+      "args": ["exec", "-it", "agent-requester", "python", "-m", "mcp_server"],
+      "env": {
+        "MCP_SERVER_NAME": "a2a-requester",
+        "MCP_SERVER_VERSION": "1.0.0"
+      }
+    },
+    "a2a-provider": {
+      "command": "docker",
+      "args": ["exec", "-it", "agent-provider", "python", "-m", "mcp_server"],
+      "env": {
+        "MCP_SERVER_NAME": "a2a-provider",
+        "MCP_SERVER_VERSION": "1.0.0"
+      }
+    },
+    "a2a-executor": {
+      "command": "docker",
+      "args": ["exec", "-it", "agent-executor", "python", "-m", "mcp_server"],
+      "env": {
+        "MCP_SERVER_NAME": "a2a-executor",
+        "MCP_SERVER_VERSION": "1.0.0"
+      }
+    }
+  }
+}

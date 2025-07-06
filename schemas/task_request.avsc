@@ -1,0 +1,39 @@
+{
+  "type": "record",
+  "name": "TaskRequest",
+  "namespace": "com.a2a.schema",
+  "fields": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "doc": "Unique identifier for the task"
+    },
+    {
+      "name": "requester_id",
+      "type": "string",
+      "doc": "ID of the agent requesting the task"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "doc": "Description of the task to be performed"
+    },
+    {
+      "name": "proposed_cost",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Proposed cost for the task execution"
+    },
+    {
+      "name": "priority",
+      "type": "int",
+      "default": 1,
+      "doc": "Priority level (1=low, 5=high)"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "doc": "Timestamp when the request was created (Unix epoch in milliseconds)"
+    }
+  ]
+}

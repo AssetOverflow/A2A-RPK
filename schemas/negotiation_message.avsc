@@ -1,0 +1,49 @@
+{
+  "type": "record",
+  "name": "NegotiationMessage",
+  "namespace": "com.a2a.schema",
+  "fields": [
+    {
+      "name": "task_id",
+      "type": "string",
+      "doc": "Unique identifier for the task being negotiated"
+    },
+    {
+      "name": "sender_id",
+      "type": "string",
+      "doc": "ID of the agent sending the negotiation message"
+    },
+    {
+      "name": "receiver_id",
+      "type": "string",
+      "doc": "ID of the agent receiving the negotiation message"
+    },
+    {
+      "name": "negotiation_round",
+      "type": "int",
+      "doc": "Round number of the negotiation"
+    },
+    {
+      "name": "offer",
+      "type": ["null", "double"],
+      "default": null,
+      "doc": "Offered price for the task"
+    },
+    {
+      "name": "approved",
+      "type": "boolean",
+      "doc": "Whether the current offer is approved"
+    },
+    {
+      "name": "message",
+      "type": ["null", "string"],
+      "default": null,
+      "doc": "Optional negotiation message"
+    },
+    {
+      "name": "timestamp",
+      "type": "long",
+      "doc": "Timestamp when the negotiation message was created (Unix epoch in milliseconds)"
+    }
+  ]
+}

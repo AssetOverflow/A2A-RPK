@@ -1,0 +1,27 @@
+# A2A-RPK Project Dependencies
+# Used by both agents and test scripts
+
+# Kafka and Schema Registry
+kafka-python
+six
+fastavro
+requests
+
+# MCP (Model Context Protocol) support
+mcp
+
+# Utilities
+python-dotenv
+structlog
+
+# Web framework
+fastapi
+uvicorn
+
+# Testing and HTTP client
+httpx
+pytest
+pytest-asyncio
+
+# Pydantic for data validation
+pydantic
